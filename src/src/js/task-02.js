@@ -7,19 +7,36 @@ const ingredients = [
   'Condiments',
 ];
 
+
 const ingredientsEl = document.querySelector('ul');
 const ingredientsTotalListEl = [];
 
-const ingredientsListEl = ingredients.forEach((element) => {
+const ingredientsListEl = ingredients.map((element) => {
 const ingredientsTitleEl = document.createElement('li');
 
   ingredientsTitleEl.classList.add('item');
   ingredientsTitleEl.textContent = element;
   ingredientsTotalListEl.push(ingredientsTitleEl);
   console.log(ingredientsTitleEl);
+  return ingredientsTitleEl;
   });
 
 ingredientsEl.append(...ingredientsTotalListEl);
+
+
+// const ingredientsEl = document.querySelector('ul');
+// const ingredientsTotalListEl = [];
+
+// const ingredientsListEl = ingredients.forEach((element) => {
+// const ingredientsTitleEl = document.createElement('li');
+
+//   ingredientsTitleEl.classList.add('item');
+//   ingredientsTitleEl.textContent = element;
+//   ingredientsTotalListEl.push(ingredientsTitleEl);
+//   console.log(ingredientsTitleEl);
+//   });
+
+// ingredientsEl.append(...ingredientsTotalListEl);
 
 
 // Напиши скрипт, который для каждого элемента массива ingredients:

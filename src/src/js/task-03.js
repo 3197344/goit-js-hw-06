@@ -20,3 +20,16 @@ const images = [
 
 // Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 // Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы.
+
+
+
+// Получить ссылку на ДОМ-элемент.
+const ulEl = document.querySelector('.gallery');
+// Пройтись циклом по коллекции данных и создать новые элементы с этими данными.
+const galleryTotalListEl = [];
+  images.forEach(el => {
+    ulEl.insertAdjacentHTML(
+    'afterbegin',
+    `<li> <img src = "${el.url}" alt = "${el.alt}"  width = "300" height = "200" /></li>`,
+  );
+});

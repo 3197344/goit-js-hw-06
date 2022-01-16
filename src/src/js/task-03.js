@@ -26,7 +26,7 @@ const images = [
 // Получить ссылку на ДОМ-элемент.
 const ulEl = document.querySelector('.gallery');
 // Пройтись циклом по коллекции данных и создать новые элементы с этими данными.
-const galleryTotalListEl = [];
+// const galleryTotalListEl = [];
   images.forEach(el => {
     ulEl.insertAdjacentHTML(
     'afterbegin',

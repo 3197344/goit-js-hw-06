@@ -7,11 +7,14 @@ function getRandomHexColor() {
 
 function changesBackgroundColorOfBody(event) {
   //  event.preventDefault();
-  document.body.style.backgroundColor = `${getRandomHexColor()}`;
-  spanEl.innerHTML = `${getRandomHexColor()}`;
+  const colorEl = `${getRandomHexColor()}`;
+  document.body.style.backgroundColor = colorEl;
+  spanEl.innerHTML = colorEl;
 }
 changesBackgroundColorOfBody();
+
 button.addEventListener('click', changesBackgroundColorOfBody);
+
 // Напиши скрипт, который изменяет цвета фона элемента <body>
 // через инлайн стиль при клике на button.change - color и 
 // выводит значение цвета в span.color.

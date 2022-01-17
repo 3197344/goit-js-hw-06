@@ -25,11 +25,20 @@ const images = [
 
 // Получить ссылку на ДОМ-элемент.
 const ulEl = document.querySelector('.gallery');
+const imagesListEl = [];
 // Пройтись циклом по коллекции данных и создать новые элементы с этими данными.
 // const galleryTotalListEl = [];
   images.forEach(el => {
-    ulEl.insertAdjacentHTML(
+    imagesListEl.push(ulEl.insertAdjacentHTML(
     'afterbegin',
     `<li> <img src = "${el.url}" alt = "${el.alt}"  width = "300" height = "200" /></li>`,
-  );
+  ));
 });
+
+
+//   images.forEach(el => {
+//     ulEl.insertAdjacentHTML(
+//     'afterbegin',
+//     `<li> <img src = "${el.url}" alt = "${el.alt}"  width = "300" height = "200" /></li>`,
+//   );
+// });
